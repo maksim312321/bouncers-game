@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+    background: linear-gradient(#def, #7ac);
+}
+.container{
+    height: 100vh;
+}
+.name, .level{
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 10px;
+    background-color: inherit; 
+    box-shadow: black;  
+}
+.levels{
+    text-align: center; 
+    /* родителю задал tac, чтобы кнопки по центру вровнять */
+}
+.level{
+    display: inline-block;
+}
+.game-field{
+    display: none;
+    width: 700px;
+    height: 700px;
+    margin: 100px auto 100px auto;
+    background-color: white;
+    border: grey solid 2px;
+}
+.player{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
