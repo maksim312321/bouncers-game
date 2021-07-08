@@ -19,15 +19,17 @@ body{
 .level{
     display: inline-block;
 }
-.game-field{
-    display: none;
+#game-field{
+    display: block;
+    position: relative;
     width: 700px;
     height: 700px;
     margin: 100px auto 100px auto;
     background-color: white;
     border: grey solid 2px;
 }
-.player{
+#enemy{
+    position: absolute;
     height: 50px;
     width: 50px;
     border-radius: 50%;
