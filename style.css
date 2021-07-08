@@ -12,7 +12,7 @@ body{
     background-color: inherit; 
     box-shadow: black;  
 }
-.levels{
+#levels{
     text-align: center; 
     /* родителю задал tac, чтобы кнопки по центру вровнять */
 }
@@ -24,14 +24,22 @@ body{
     position: relative;
     width: 700px;
     height: 700px;
-    margin: 100px auto 100px auto;
+    margin: 50px auto 50px auto;
     background-color: white;
     border: grey solid 2px;
 }
 #enemy{
     position: absolute;
+    display: none;
     height: 50px;
     width: 50px;
     border-radius: 50%;
     background-color: red;
+}
+.score_title{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    font-size: 15px;
 }
