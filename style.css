@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 body{
     background: linear-gradient(#def, #7ac);
+    font-family: Roboto;
 }
 .container{
     height: 100vh;
@@ -38,10 +39,16 @@ body{
     border-radius: 50%;
     background-color: red;
 }
+.wrapper-level{
+    display: inline-block;
+}
 .score_title{
     text-align: center;
 }
 .title{
     text-align: center;
     font-size: 15px;
+}
+.precent{
+    font-size: 12px;
 }
