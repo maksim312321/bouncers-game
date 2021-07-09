@@ -11,40 +11,39 @@ function startPosition(){//ф-я возврата на стартовую поз
     score.innerHTML = 0;
 };
 
-function gameEnd(){//окончание игры
-    startPosition(); //
-    clearInterval(interval_id);
-    alert("Игра закончилась со счетом: " + count);
-    levels.style.display ="block";
-    count = 0;
-    gameField.removeEventListener("click", hit)
-};
 
-function hit(event){
+function hit(event){ //ф-я попадания по элементу
     if(event.target == enemy){
         enemy.style.display = "none"
         count = count + 1;
         score.innerHTML = count;
         console.log("счет" + count)
     }
-    else{
-    };
 };
 
 
 function gameStart(enemySize, time){//ф-я начала игры
     levels.style.display = "none";
-    setTimeout(gameEnd,15000)
     count = 0;//счет 
     enemy.style.width  = enemySize+"px";
     enemy.style.height  = enemySize+"px";
+    setTimeout(gameEnd, 10000)
     interval_id = setInterval(function(){
      enemy.style.display = "block"
      enemy.style.left = (Math.floor(Math.random( ) * (gameField.clientHeight - enemySize)))+ "px";
      enemy.style.top = (Math.floor(Math.random( ) * (gameField.clientHeight - enemySize)))+ "px";
      }, time);
+    gameField.addEventListener("click", hit);
 
-    gameField.addEventListener("click", hit)
+    function gameEnd(){//окончание игры
+        startPosition(); 
+        clearInterval(interval_id);
+        alert("Игра закончилась со счетом: " + count + ". Точность: " + Math.round((count/Math.floor((10000-time)/time))*100) + "%.");
+        Math.fround
+        levels.style.display ="block";
+        gameField.removeEventListener("click", hit)
+    };
+
 }
 
 
