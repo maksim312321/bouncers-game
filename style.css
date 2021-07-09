@@ -22,8 +22,10 @@ body{
 #game-field{
     display: block;
     position: relative;
-    width: 700px;
-    height: 700px;
+    width: 70%;
+    height: 60%;
+    max-width: 1000px;
+    max-height: 1000px;
     margin: 50px auto 50px auto;
     background-color: white;
     border: grey solid 2px;

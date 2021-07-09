@@ -30,8 +30,9 @@ function gameStart(enemySize, time){//ф-я начала игры
     setTimeout(gameEnd, 10000)
     interval_id = setInterval(function(){
      enemy.style.display = "block"
-     enemy.style.left = (Math.floor(Math.random( ) * (gameField.clientHeight - enemySize)))+ "px";
+     enemy.style.left = (Math.floor(Math.random( ) * (gameField.clientWidth - enemySize)))+ "px";
      enemy.style.top = (Math.floor(Math.random( ) * (gameField.clientHeight - enemySize)))+ "px";
+
      }, time);
     gameField.addEventListener("click", hit);
 
