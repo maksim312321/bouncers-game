@@ -7,8 +7,6 @@ let interval_id;
 let count;
 let precent;//процент прохждения
 
-
-
 for(let i=0; i<5; i++){//вывод из локального хранилища процент прохождения игры
     if(localStorage.getItem(i, precent)){
     levelsPresent[i].innerHTML = localStorage.getItem(i, precent) + "%";
@@ -38,6 +36,22 @@ function hit(event){ //ф-я попадания по элементу
     }
 };
 
+function result(precent){ //Текстовый вывод результата
+    if(precent>=80){
+        return(" Круто!")
+    }
+    else if(precent>=60){
+        return(" Неплохо!")
+    }
+    else if(precent>=40){
+        return(" Нормально!")
+    }
+    else{
+        return(" Пробуй еще, у тебя получится!")
+    }
+    
+}
+
 console.log(levelsPresent);
 function gameStart(enemySize, time, level){//ф-я начала игры
     levels.style.display = "none";
@@ -57,7 +71,7 @@ function gameStart(enemySize, time, level){//ф-я начала игры
         startPosition(); 
         clearInterval(interval_id);
         precent = Math.round((count/Math.floor((10000-time)/time))*100);
-        alert("Игра закончилась со счетом: " + count + ". Точность: " + precent + "%.");
+        alert("Точность: " + precent + "%."+ result(precent));
         localStorage.setItem(level-1, precent);
         levelsPresent[level-1].innerHTML = localStorage.getItem(level-1, precent) + "%";
         levels.style.display ="block";

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,900&display=swap');
 body{
-    background: linear-gradient(#def, #7ac);
+    background: linear-gradient(rgba(255, 209, 209, 0.842), rgba(0, 113, 128, 0.842));
     font-family: Roboto;
 }
 .container{
@@ -29,7 +30,7 @@ body{
     max-height: 1000px;
     margin: 50px auto 50px auto;
     background-color: white;
-    border: grey solid 2px;
+    border: grey dotted  2px;
 }
 #enemy{
     position: absolute;
@@ -48,6 +49,7 @@ body{
 .title{
     text-align: center;
     font-size: 15px;
+    font-weight: 900;
 }
 .precent{
     font-size: 12px;
