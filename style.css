@@ -33,6 +33,7 @@ body{
     border: grey dotted  2px;
 }
 #enemy{
+
     position: absolute;
     display: none;
     height: 50px;
